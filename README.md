@@ -38,29 +38,22 @@ class Config(object):
     API_HASH = getenv("API_HASH", "")
     TG_USER_SESSION = getenv("TG_USER_SESSION", "")
     ADMINS = [x.strip("@ ") for x in str(getenv("ADMINS", "") or "").split(",") if x.strip("@ ")]
+```
 
-Environment Variables
+##Environment Variables
 
 Variable	Description
-
+```
 APP_ID	Telegram API ID from https://my.telegram.org/apps
 API_HASH	Telegram API Hash from https://my.telegram.org/apps
 TG_USER_SESSION	Pyrogram session string for your user account
 ADMINS	Comma-separated list of allowed admin IDs or usernames
-
-
-Example .env file:
-
-APP_ID=123456
-API_HASH=abcdef1234567890abcdef1234567890
-TG_USER_SESSION=YOUR_SESSION_STRING
-ADMINS=123456789
-
+```
 
 ---
 
-🧠 How It Works
-
+## 🧠 How It Works
+```
 1. The userbot runs as your Telegram account (not a bot token).
 
 
